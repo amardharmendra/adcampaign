@@ -1,0 +1,1780 @@
+INFO  [2017-10-21 15:25:00,697] org.eclipse.jetty.util.log: Logging initialized @1999ms to org.eclipse.jetty.util.log.Slf4jLog
+INFO  [2017-10-21 15:25:00,864] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 15:25:00,867] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 15:25:00,870] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-assets for path /swagger-static/*
+INFO  [2017-10-21 15:25:00,912] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-oauth2-connect for path /o2c.html/*
+WARN  [2017-10-21 15:25:00,939] org.reflections.Reflections: given scan urls are empty. set urls in the configuration
+INFO  [2017-10-21 15:25:00,963] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 15:25:00,963] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 15:25:00,973] io.dropwizard.server.ServerFactory: Starting adcampaign
+================================================================================
+
+                              adcampaign
+
+================================================================================
+
+
+INFO  [2017-10-21 15:25:01,096] org.eclipse.jetty.setuid.SetUIDListener: Opened application@69ed5ea2{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 15:25:01,096] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@56a4abd0{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 15:25:01,098] org.eclipse.jetty.server.Server: jetty-9.4.6.v20170531
+INFO  [2017-10-21 15:25:01,784] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    POST    /ad (com.adcampaign.resources.AdResource)
+    GET     /ad/activeads (com.adcampaign.resources.AdResource)
+    GET     /ad/{partnerId} (com.adcampaign.resources.AdResource)
+    GET     /swagger (io.federecio.dropwizard.swagger.SwaggerResource)
+    GET     /swagger.{type:json|yaml} (io.swagger.jaxrs.listing.ApiListingResource)
+
+INFO  [2017-10-21 15:25:01,786] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@503556cb{/,null,AVAILABLE}
+INFO  [2017-10-21 15:25:01,792] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+WARN  [2017-10-21 15:25:01,792] io.dropwizard.setup.AdminEnvironment: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS APPLICATION HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW      !
+!     IF IT DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE      !
+!    LETTING YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH OF YOUR    !
+!         APPLICATION'S DEPENDENCIES WHICH FULLY (BUT LIGHTLY) TESTS IT.       !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2017-10-21 15:25:01,799] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@74bbc273{/,null,AVAILABLE}
+INFO  [2017-10-21 15:25:01,812] org.eclipse.jetty.server.AbstractConnector: Started application@69ed5ea2{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 15:25:01,813] org.eclipse.jetty.server.AbstractConnector: Started admin@56a4abd0{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 15:25:01,813] org.eclipse.jetty.server.Server: Started @3117ms
+WARN  [2017-10-21 15:25:09,492] org.reflections.Reflections: given scan urls are empty. set urls in the configuration
+ERROR [2017-10-21 15:25:09,500] io.dropwizard.jersey.errors.LoggingExceptionMapper: Error handling a request: d8c87d56b1bc3d46
+! java.lang.NullPointerException: null
+! at io.swagger.core.filter.SpecFilter.filter(SpecFilter.java:47)
+! at io.swagger.jaxrs.listing.BaseApiListingResource.process(BaseApiListingResource.java:130)
+! at io.swagger.jaxrs.listing.BaseApiListingResource.getListingJsonResponse(BaseApiListingResource.java:167)
+! at io.swagger.jaxrs.listing.ApiListingResource.getListing(ApiListingResource.java:33)
+! at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+! at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+! at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+! at java.lang.reflect.Method.invoke(Method.java:498)
+! at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+! at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+! at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+! at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+! at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+! at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+! at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:473)
+! at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:427)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:388)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:341)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:228)
+! at io.dropwizard.jetty.NonblockingServletHolder.handle(NonblockingServletHolder.java:49)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+! at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:34)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1637)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:50)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:44)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1637)
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+! at com.codahale.metrics.jetty9.InstrumentedHandler.handle(InstrumentedHandler.java:241)
+! at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+! at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:521)
+! at io.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:68)
+! at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:56)
+! at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:169)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+! at org.eclipse.jetty.server.Server.handle(Server.java:564)
+! at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+! at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+! at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+! at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+! at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+! at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+! at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+! at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+! at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:199)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:673)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:591)
+! at java.lang.Thread.run(Thread.java:748)
+INFO  [2017-10-21 15:26:09,206] org.eclipse.jetty.util.log: Logging initialized @1770ms to org.eclipse.jetty.util.log.Slf4jLog
+INFO  [2017-10-21 15:26:09,326] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 15:26:09,328] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 15:26:09,330] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-assets for path /swagger-static/*
+INFO  [2017-10-21 15:26:09,357] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-oauth2-connect for path /o2c.html/*
+WARN  [2017-10-21 15:26:09,376] org.reflections.Reflections: given scan urls are empty. set urls in the configuration
+INFO  [2017-10-21 15:26:09,397] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 15:26:09,397] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 15:26:09,407] io.dropwizard.server.ServerFactory: Starting adcampaign
+================================================================================
+
+                              adcampaign
+
+================================================================================
+
+
+ERROR [2017-10-21 15:26:09,510] io.dropwizard.cli.ServerCommand: Unable to start server, shutting down
+! java.net.BindException: Address already in use
+! at sun.nio.ch.Net.bind0(Native Method)
+! at sun.nio.ch.Net.bind(Net.java:433)
+! at sun.nio.ch.Net.bind(Net.java:425)
+! at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+! at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+! at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:298)
+! at org.eclipse.jetty.setuid.SetUIDListener.lifeCycleStarting(SetUIDListener.java:200)
+! ... 8 common frames omitted
+! Causing: java.lang.RuntimeException: java.net.BindException: Address already in use
+! at org.eclipse.jetty.setuid.SetUIDListener.lifeCycleStarting(SetUIDListener.java:213)
+! at org.eclipse.jetty.util.component.AbstractLifeCycle.setStarting(AbstractLifeCycle.java:188)
+! at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:67)
+! at io.dropwizard.cli.ServerCommand.run(ServerCommand.java:53)
+! at io.dropwizard.cli.EnvironmentCommand.run(EnvironmentCommand.java:44)
+! at io.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:85)
+! at io.dropwizard.cli.Cli.run(Cli.java:74)
+! at io.dropwizard.Application.run(Application.java:89)
+! at com.adcampaign.AdcampaignApplication.main(AdcampaignApplication.java:19)
+WARN  [2017-10-21 15:26:17,201] org.eclipse.jetty.server.AbstractConnector: 
+! java.io.IOException: Thread signal failed
+! at sun.nio.ch.NativeThread.signal(Native Method)
+! at sun.nio.ch.ServerSocketChannelImpl.implCloseSelectableChannel(ServerSocketChannelImpl.java:292)
+! at java.nio.channels.spi.AbstractSelectableChannel.implCloseChannel(AbstractSelectableChannel.java:234)
+! at java.nio.channels.spi.AbstractInterruptibleChannel.close(AbstractInterruptibleChannel.java:115)
+! at org.eclipse.jetty.server.ServerConnector.close(ServerConnector.java:334)
+! at org.eclipse.jetty.server.AbstractNetworkConnector.shutdown(AbstractNetworkConnector.java:107)
+! at org.eclipse.jetty.server.ServerConnector.shutdown(ServerConnector.java:316)
+! at org.eclipse.jetty.server.Server.doStop(Server.java:472)
+! at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+! at org.eclipse.jetty.util.thread.ShutdownThread.run(ShutdownThread.java:138)
+INFO  [2017-10-21 15:26:17,204] org.eclipse.jetty.server.AbstractConnector: Stopped application@69ed5ea2{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 15:26:17,205] org.eclipse.jetty.server.AbstractConnector: Stopped admin@56a4abd0{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 15:26:17,206] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@74bbc273{/,null,UNAVAILABLE}
+INFO  [2017-10-21 15:26:17,209] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@503556cb{/,null,UNAVAILABLE}
+INFO  [2017-10-21 15:26:31,201] org.eclipse.jetty.util.log: Logging initialized @1789ms to org.eclipse.jetty.util.log.Slf4jLog
+INFO  [2017-10-21 15:26:31,330] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 15:26:31,331] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 15:26:31,334] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-assets for path /swagger-static/*
+INFO  [2017-10-21 15:26:31,367] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-oauth2-connect for path /o2c.html/*
+WARN  [2017-10-21 15:26:31,389] org.reflections.Reflections: given scan urls are empty. set urls in the configuration
+INFO  [2017-10-21 15:26:31,411] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 15:26:31,411] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 15:26:31,418] io.dropwizard.server.ServerFactory: Starting adcampaign
+================================================================================
+
+                              adcampaign
+
+================================================================================
+
+
+INFO  [2017-10-21 15:26:31,526] org.eclipse.jetty.setuid.SetUIDListener: Opened application@7d3691e1{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 15:26:31,527] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@46a123e4{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 15:26:31,529] org.eclipse.jetty.server.Server: jetty-9.4.6.v20170531
+INFO  [2017-10-21 15:26:32,089] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    POST    /ad (com.adcampaign.resources.AdResource)
+    GET     /ad/activeads (com.adcampaign.resources.AdResource)
+    GET     /ad/{partnerId} (com.adcampaign.resources.AdResource)
+    GET     /swagger (io.federecio.dropwizard.swagger.SwaggerResource)
+    GET     /swagger.{type:json|yaml} (io.swagger.jaxrs.listing.ApiListingResource)
+
+INFO  [2017-10-21 15:26:32,090] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@2c3f43d1{/,null,AVAILABLE}
+INFO  [2017-10-21 15:26:32,096] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+WARN  [2017-10-21 15:26:32,096] io.dropwizard.setup.AdminEnvironment: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS APPLICATION HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW      !
+!     IF IT DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE      !
+!    LETTING YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH OF YOUR    !
+!         APPLICATION'S DEPENDENCIES WHICH FULLY (BUT LIGHTLY) TESTS IT.       !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2017-10-21 15:26:32,101] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@778113f2{/,null,AVAILABLE}
+INFO  [2017-10-21 15:26:32,112] org.eclipse.jetty.server.AbstractConnector: Started application@7d3691e1{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 15:26:32,113] org.eclipse.jetty.server.AbstractConnector: Started admin@46a123e4{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 15:26:32,113] org.eclipse.jetty.server.Server: Started @2702ms
+INFO  [2017-10-21 15:28:22,792] org.eclipse.jetty.server.AbstractConnector: Stopped application@7d3691e1{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 15:28:22,793] org.eclipse.jetty.server.AbstractConnector: Stopped admin@46a123e4{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 15:28:22,795] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@778113f2{/,null,UNAVAILABLE}
+INFO  [2017-10-21 15:28:22,798] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@2c3f43d1{/,null,UNAVAILABLE}
+INFO  [2017-10-21 15:28:36,854] org.eclipse.jetty.util.log: Logging initialized @1725ms to org.eclipse.jetty.util.log.Slf4jLog
+INFO  [2017-10-21 15:28:36,977] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 15:28:36,978] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 15:28:36,981] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-assets for path /swagger-static/*
+INFO  [2017-10-21 15:28:37,009] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-oauth2-connect for path /o2c.html/*
+WARN  [2017-10-21 15:28:37,027] org.reflections.Reflections: given scan urls are empty. set urls in the configuration
+INFO  [2017-10-21 15:28:37,046] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 15:28:37,046] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 15:28:37,053] io.dropwizard.server.ServerFactory: Starting adcampaign
+================================================================================
+
+                              adcampaign
+
+================================================================================
+
+
+INFO  [2017-10-21 15:28:37,143] org.eclipse.jetty.setuid.SetUIDListener: Opened application@58aa1d72{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 15:28:37,143] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@33d7765a{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 15:28:37,145] org.eclipse.jetty.server.Server: jetty-9.4.6.v20170531
+INFO  [2017-10-21 15:28:37,707] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    POST    /ad (com.adcampaign.resources.AdResource)
+    GET     /ad/activeads (com.adcampaign.resources.AdResource)
+    GET     /ad/{partnerId} (com.adcampaign.resources.AdResource)
+    GET     /swagger (io.federecio.dropwizard.swagger.SwaggerResource)
+    GET     /swagger.{type:json|yaml} (io.swagger.jaxrs.listing.ApiListingResource)
+
+INFO  [2017-10-21 15:28:37,709] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@60f9dc7e{/,null,AVAILABLE}
+INFO  [2017-10-21 15:28:37,714] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2017-10-21 15:28:37,720] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@c4cceb{/,null,AVAILABLE}
+INFO  [2017-10-21 15:28:37,731] org.eclipse.jetty.server.AbstractConnector: Started application@58aa1d72{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 15:28:37,731] org.eclipse.jetty.server.AbstractConnector: Started admin@33d7765a{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 15:28:37,731] org.eclipse.jetty.server.Server: Started @2604ms
+INFO  [2017-10-21 15:31:55,014] org.eclipse.jetty.server.AbstractConnector: Stopped application@58aa1d72{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 15:31:55,015] org.eclipse.jetty.server.AbstractConnector: Stopped admin@33d7765a{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 15:31:55,016] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@c4cceb{/,null,UNAVAILABLE}
+INFO  [2017-10-21 15:31:55,019] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@60f9dc7e{/,null,UNAVAILABLE}
+INFO  [2017-10-21 15:31:58,203] org.eclipse.jetty.util.log: Logging initialized @1529ms to org.eclipse.jetty.util.log.Slf4jLog
+INFO  [2017-10-21 15:31:58,313] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 15:31:58,314] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 15:31:58,316] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-assets for path /swagger-static/*
+INFO  [2017-10-21 15:31:58,343] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-oauth2-connect for path /o2c.html/*
+INFO  [2017-10-21 15:31:58,411] org.reflections.Reflections: Reflections took 49 ms to scan 1 urls, producing 27 keys and 27 values 
+INFO  [2017-10-21 15:31:58,504] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 15:31:58,504] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 15:31:58,511] io.dropwizard.server.ServerFactory: Starting adcampaign
+================================================================================
+
+                              adcampaign
+
+================================================================================
+
+
+INFO  [2017-10-21 15:31:58,610] org.eclipse.jetty.setuid.SetUIDListener: Opened application@2365ea38{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 15:31:58,611] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@cbf1997{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 15:31:58,613] org.eclipse.jetty.server.Server: jetty-9.4.6.v20170531
+INFO  [2017-10-21 15:31:59,269] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    POST    /ad (com.adcampaign.resources.AdResource)
+    GET     /ad/activeads (com.adcampaign.resources.AdResource)
+    GET     /ad/{partnerId} (com.adcampaign.resources.AdResource)
+    GET     /swagger (io.federecio.dropwizard.swagger.SwaggerResource)
+    GET     /swagger.{type:json|yaml} (io.swagger.jaxrs.listing.ApiListingResource)
+
+INFO  [2017-10-21 15:31:59,270] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@5ddb302{/,null,AVAILABLE}
+INFO  [2017-10-21 15:31:59,276] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2017-10-21 15:31:59,282] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@1b1ea1d9{/,null,AVAILABLE}
+INFO  [2017-10-21 15:31:59,295] org.eclipse.jetty.server.AbstractConnector: Started application@2365ea38{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 15:31:59,295] org.eclipse.jetty.server.AbstractConnector: Started admin@cbf1997{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 15:31:59,295] org.eclipse.jetty.server.Server: Started @2623ms
+INFO  [2017-10-21 15:32:13,995] org.reflections.Reflections: Reflections took 6 ms to scan 1 urls, producing 27 keys and 27 values 
+ERROR [2017-10-21 15:34:40,308] io.dropwizard.jersey.errors.LoggingExceptionMapper: Error handling a request: 380bf32c3230040b
+! java.lang.NullPointerException: null
+! at com.adcampaign.db.impl.AdDaoTempStorage.findLiveAds(TempStorage.java:92)
+! at com.adcampaign.db.impl.AdDaoTempStorage.getAllAds(TempStorage.java:103)
+! at com.adcampaign.service.impl.AdManagerImpl.getAllActiveAds(AdManagerImpl.java:58)
+! at com.adcampaign.resources.AdResource.getAllActiveAds(AdResource.java:49)
+! at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+! at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+! at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+! at java.lang.reflect.Method.invoke(Method.java:498)
+! at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+! at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+! at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+! at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+! at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+! at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+! at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:473)
+! at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:427)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:388)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:341)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:228)
+! at io.dropwizard.jetty.NonblockingServletHolder.handle(NonblockingServletHolder.java:49)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+! at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:34)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1637)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:50)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:44)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1637)
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+! at com.codahale.metrics.jetty9.InstrumentedHandler.handle(InstrumentedHandler.java:241)
+! at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+! at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:521)
+! at io.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:68)
+! at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:56)
+! at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:169)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+! at org.eclipse.jetty.server.Server.handle(Server.java:564)
+! at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+! at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+! at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+! at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+! at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+! at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+! at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+! at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+! at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:199)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:673)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:591)
+! at java.lang.Thread.run(Thread.java:748)
+ERROR [2017-10-21 15:39:04,350] io.dropwizard.jersey.errors.LoggingExceptionMapper: Error handling a request: be6c65f35f8996a0
+! java.lang.NullPointerException: null
+! at com.adcampaign.db.impl.AdDaoTempStorage.findLiveAds(TempStorage.java:92)
+! at com.adcampaign.db.impl.AdDaoTempStorage.getAllAds(TempStorage.java:103)
+! at com.adcampaign.service.impl.AdManagerImpl.getAllActiveAds(AdManagerImpl.java:58)
+! at com.adcampaign.resources.AdResource.getAllActiveAds(AdResource.java:49)
+! at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+! at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+! at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+! at java.lang.reflect.Method.invoke(Method.java:498)
+! at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+! at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+! at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+! at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+! at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+! at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+! at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:473)
+! at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:427)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:388)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:341)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:228)
+! at io.dropwizard.jetty.NonblockingServletHolder.handle(NonblockingServletHolder.java:49)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+! at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:34)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1637)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:50)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:44)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1637)
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+! at com.codahale.metrics.jetty9.InstrumentedHandler.handle(InstrumentedHandler.java:241)
+! at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+! at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:521)
+! at io.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:68)
+! at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:56)
+! at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:169)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+! at org.eclipse.jetty.server.Server.handle(Server.java:564)
+! at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+! at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+! at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+! at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+! at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+! at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+! at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+! at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+! at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:199)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:673)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:591)
+! at java.lang.Thread.run(Thread.java:748)
+INFO  [2017-10-21 15:39:04,409] org.eclipse.jetty.server.AbstractConnector: Stopped application@2365ea38{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 15:39:04,409] org.eclipse.jetty.server.AbstractConnector: Stopped admin@cbf1997{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 15:39:04,411] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@1b1ea1d9{/,null,UNAVAILABLE}
+INFO  [2017-10-21 15:39:04,413] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@5ddb302{/,null,UNAVAILABLE}
+INFO  [2017-10-21 15:41:12,042] org.eclipse.jetty.util.log: Logging initialized @1532ms to org.eclipse.jetty.util.log.Slf4jLog
+INFO  [2017-10-21 15:41:12,168] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 15:41:12,169] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 15:41:12,171] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-assets for path /swagger-static/*
+INFO  [2017-10-21 15:41:12,199] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-oauth2-connect for path /o2c.html/*
+INFO  [2017-10-21 15:41:12,257] org.reflections.Reflections: Reflections took 38 ms to scan 1 urls, producing 27 keys and 27 values 
+INFO  [2017-10-21 15:41:12,383] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 15:41:12,383] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 15:41:12,393] io.dropwizard.server.ServerFactory: Starting adcampaign
+================================================================================
+
+                              adcampaign
+
+================================================================================
+
+
+INFO  [2017-10-21 15:41:12,508] org.eclipse.jetty.setuid.SetUIDListener: Opened application@367d34c0{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 15:41:12,508] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@4ce25e47{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 15:41:12,510] org.eclipse.jetty.server.Server: jetty-9.4.6.v20170531
+INFO  [2017-10-21 15:41:13,046] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    POST    /ad (com.adcampaign.resources.AdResource)
+    GET     /ad/activeads (com.adcampaign.resources.AdResource)
+    GET     /ad/{partnerId} (com.adcampaign.resources.AdResource)
+    GET     /swagger (io.federecio.dropwizard.swagger.SwaggerResource)
+    GET     /swagger.{type:json|yaml} (io.swagger.jaxrs.listing.ApiListingResource)
+
+INFO  [2017-10-21 15:41:13,047] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@324e8baa{/,null,AVAILABLE}
+INFO  [2017-10-21 15:41:13,053] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2017-10-21 15:41:13,059] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@6996bbc4{/,null,AVAILABLE}
+INFO  [2017-10-21 15:41:13,070] org.eclipse.jetty.server.AbstractConnector: Started application@367d34c0{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 15:41:13,071] org.eclipse.jetty.server.AbstractConnector: Started admin@4ce25e47{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 15:41:13,071] org.eclipse.jetty.server.Server: Started @2562ms
+INFO  [2017-10-21 15:53:28,414] org.eclipse.jetty.server.AbstractConnector: Stopped application@367d34c0{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 15:53:28,415] org.eclipse.jetty.server.AbstractConnector: Stopped admin@4ce25e47{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 15:53:28,416] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@6996bbc4{/,null,UNAVAILABLE}
+INFO  [2017-10-21 15:53:28,418] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@324e8baa{/,null,UNAVAILABLE}
+WARN  [2017-10-21 15:53:58,423] org.eclipse.jetty.util.thread.QueuedThreadPool: dw{STOPPING,8<=9<=1024,i=0,q=1} Couldn't stop Thread[dw-41,5,main]
+INFO  [2017-10-21 15:54:02,632] org.eclipse.jetty.util.log: Logging initialized @1607ms to org.eclipse.jetty.util.log.Slf4jLog
+INFO  [2017-10-21 15:54:02,747] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 15:54:02,748] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 15:54:02,751] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-assets for path /swagger-static/*
+INFO  [2017-10-21 15:54:02,778] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-oauth2-connect for path /o2c.html/*
+INFO  [2017-10-21 15:54:02,836] org.reflections.Reflections: Reflections took 39 ms to scan 1 urls, producing 27 keys and 27 values 
+INFO  [2017-10-21 15:54:03,119] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 15:54:03,119] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 15:54:03,130] io.dropwizard.server.ServerFactory: Starting adcampaign
+================================================================================
+
+                              adcampaign
+
+================================================================================
+
+
+INFO  [2017-10-21 15:54:03,262] org.eclipse.jetty.setuid.SetUIDListener: Opened application@2365ea38{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 15:54:03,262] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@cbf1997{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 15:54:03,265] org.eclipse.jetty.server.Server: jetty-9.4.6.v20170531
+INFO  [2017-10-21 15:54:03,914] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    POST    /ad (com.adcampaign.resources.AdResource)
+    GET     /ad/activeads (com.adcampaign.resources.AdResource)
+    GET     /ad/{partnerId} (com.adcampaign.resources.AdResource)
+    GET     /swagger (io.federecio.dropwizard.swagger.SwaggerResource)
+    GET     /swagger.{type:json|yaml} (io.swagger.jaxrs.listing.ApiListingResource)
+
+INFO  [2017-10-21 15:54:03,915] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@5ddb302{/,null,AVAILABLE}
+INFO  [2017-10-21 15:54:03,921] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2017-10-21 15:54:03,928] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@1b1ea1d9{/,null,AVAILABLE}
+INFO  [2017-10-21 15:54:03,939] org.eclipse.jetty.server.AbstractConnector: Started application@2365ea38{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 15:54:03,940] org.eclipse.jetty.server.AbstractConnector: Started admin@cbf1997{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 15:54:03,940] org.eclipse.jetty.server.Server: Started @2916ms
+INFO  [2017-10-21 15:56:07,827] org.eclipse.jetty.server.AbstractConnector: Stopped application@2365ea38{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 15:56:07,828] org.eclipse.jetty.server.AbstractConnector: Stopped admin@cbf1997{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 15:56:07,829] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@1b1ea1d9{/,null,UNAVAILABLE}
+INFO  [2017-10-21 15:56:07,832] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@5ddb302{/,null,UNAVAILABLE}
+INFO  [2017-10-21 15:56:12,133] org.eclipse.jetty.util.log: Logging initialized @1497ms to org.eclipse.jetty.util.log.Slf4jLog
+INFO  [2017-10-21 15:56:12,249] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 15:56:12,250] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 15:56:12,253] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-assets for path /swagger-static/*
+INFO  [2017-10-21 15:56:12,282] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-oauth2-connect for path /o2c.html/*
+INFO  [2017-10-21 15:56:12,339] org.reflections.Reflections: Reflections took 34 ms to scan 1 urls, producing 27 keys and 27 values 
+INFO  [2017-10-21 15:56:12,435] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 15:56:12,435] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 15:56:12,441] io.dropwizard.server.ServerFactory: Starting adcampaign
+================================================================================
+
+                              adcampaign
+
+================================================================================
+
+
+INFO  [2017-10-21 15:56:12,528] org.eclipse.jetty.setuid.SetUIDListener: Opened application@367d34c0{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 15:56:12,528] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@4ce25e47{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 15:56:12,530] org.eclipse.jetty.server.Server: jetty-9.4.6.v20170531
+INFO  [2017-10-21 15:56:13,125] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    POST    /ad (com.adcampaign.resources.AdResource)
+    GET     /ad/activeads (com.adcampaign.resources.AdResource)
+    GET     /ad/{partnerId} (com.adcampaign.resources.AdResource)
+    GET     /swagger (io.federecio.dropwizard.swagger.SwaggerResource)
+    GET     /swagger.{type:json|yaml} (io.swagger.jaxrs.listing.ApiListingResource)
+
+INFO  [2017-10-21 15:56:13,127] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@324e8baa{/,null,AVAILABLE}
+INFO  [2017-10-21 15:56:13,133] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2017-10-21 15:56:13,140] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@6996bbc4{/,null,AVAILABLE}
+INFO  [2017-10-21 15:56:13,151] org.eclipse.jetty.server.AbstractConnector: Started application@367d34c0{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 15:56:13,151] org.eclipse.jetty.server.AbstractConnector: Started admin@4ce25e47{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 15:56:13,152] org.eclipse.jetty.server.Server: Started @2517ms
+INFO  [2017-10-21 17:00:20,360] org.eclipse.jetty.server.AbstractConnector: Stopped application@367d34c0{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:00:20,361] org.eclipse.jetty.server.AbstractConnector: Stopped admin@4ce25e47{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:00:20,364] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@6996bbc4{/,null,UNAVAILABLE}
+INFO  [2017-10-21 17:00:20,372] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@324e8baa{/,null,UNAVAILABLE}
+INFO  [2017-10-21 17:33:58,767] org.eclipse.jetty.util.log: Logging initialized @1561ms to org.eclipse.jetty.util.log.Slf4jLog
+INFO  [2017-10-21 17:33:58,877] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 17:33:58,879] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 17:33:58,881] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-assets for path /swagger-static/*
+INFO  [2017-10-21 17:33:58,911] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-oauth2-connect for path /o2c.html/*
+INFO  [2017-10-21 17:33:58,967] org.reflections.Reflections: Reflections took 37 ms to scan 1 urls, producing 32 keys and 34 values 
+INFO  [2017-10-21 17:33:59,060] org.mongodb.morphia.logging.MorphiaLoggerFactory: LoggerImplFactory set to org.mongodb.morphia.logging.jdk.JDKLoggerFactory
+INFO  [2017-10-21 17:33:59,402] org.mongodb.driver.cluster: Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+INFO  [2017-10-21 17:33:59,402] org.mongodb.driver.cluster: Adding discovered server localhost:27017 to client view of cluster
+INFO  [2017-10-21 17:33:59,481] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 17:33:59,481] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 17:33:59,490] io.dropwizard.server.ServerFactory: Starting adcampaign
+================================================================================
+
+                              adcampaign
+
+================================================================================
+
+
+INFO  [2017-10-21 17:33:59,506] org.mongodb.driver.connection: Opened connection [connectionId{localValue:1, serverValue:129}] to localhost:27017
+INFO  [2017-10-21 17:33:59,509] org.mongodb.driver.cluster: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 6]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=901947}
+INFO  [2017-10-21 17:33:59,510] org.mongodb.driver.cluster: Discovered cluster type of STANDALONE
+INFO  [2017-10-21 17:33:59,599] org.eclipse.jetty.setuid.SetUIDListener: Opened application@77c23d90{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:33:59,601] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@6d17914a{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:33:59,604] org.eclipse.jetty.server.Server: jetty-9.4.6.v20170531
+INFO  [2017-10-21 17:34:00,288] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    POST    /ad (com.adcampaign.resources.AdResource)
+    GET     /ad/activeads (com.adcampaign.resources.AdResource)
+    GET     /ad/{partnerId} (com.adcampaign.resources.AdResource)
+    GET     /swagger (io.federecio.dropwizard.swagger.SwaggerResource)
+    GET     /swagger.{type:json|yaml} (io.swagger.jaxrs.listing.ApiListingResource)
+
+INFO  [2017-10-21 17:34:00,289] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@5724c7da{/,null,AVAILABLE}
+INFO  [2017-10-21 17:34:00,294] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2017-10-21 17:34:00,299] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@574218f{/,null,AVAILABLE}
+INFO  [2017-10-21 17:34:00,310] org.eclipse.jetty.server.AbstractConnector: Started application@77c23d90{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:34:00,310] org.eclipse.jetty.server.AbstractConnector: Started admin@6d17914a{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:34:00,311] org.eclipse.jetty.server.Server: Started @3106ms
+INFO  [2017-10-21 17:35:10,683] org.eclipse.jetty.server.AbstractConnector: Stopped application@77c23d90{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:35:10,684] org.eclipse.jetty.server.AbstractConnector: Stopped admin@6d17914a{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:35:10,686] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@574218f{/,null,UNAVAILABLE}
+INFO  [2017-10-21 17:35:10,689] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@5724c7da{/,null,UNAVAILABLE}
+INFO  [2017-10-21 17:35:15,195] org.eclipse.jetty.util.log: Logging initialized @1649ms to org.eclipse.jetty.util.log.Slf4jLog
+INFO  [2017-10-21 17:35:15,312] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 17:35:15,313] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 17:35:15,316] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-assets for path /swagger-static/*
+INFO  [2017-10-21 17:35:15,344] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-oauth2-connect for path /o2c.html/*
+INFO  [2017-10-21 17:35:15,405] org.reflections.Reflections: Reflections took 41 ms to scan 1 urls, producing 32 keys and 34 values 
+INFO  [2017-10-21 17:35:15,527] org.mongodb.morphia.logging.MorphiaLoggerFactory: LoggerImplFactory set to org.mongodb.morphia.logging.jdk.JDKLoggerFactory
+INFO  [2017-10-21 17:35:16,006] org.mongodb.driver.cluster: Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+INFO  [2017-10-21 17:35:16,006] org.mongodb.driver.cluster: Adding discovered server localhost:27017 to client view of cluster
+INFO  [2017-10-21 17:35:16,082] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 17:35:16,082] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 17:35:16,092] io.dropwizard.server.ServerFactory: Starting adcampaign
+================================================================================
+
+                              adcampaign
+
+================================================================================
+
+
+INFO  [2017-10-21 17:35:16,095] org.mongodb.driver.connection: Opened connection [connectionId{localValue:1, serverValue:130}] to localhost:27017
+INFO  [2017-10-21 17:35:16,097] org.mongodb.driver.cluster: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 6]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=551540}
+INFO  [2017-10-21 17:35:16,098] org.mongodb.driver.cluster: Discovered cluster type of STANDALONE
+INFO  [2017-10-21 17:35:16,208] org.eclipse.jetty.setuid.SetUIDListener: Opened application@74c7522c{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:35:16,208] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@77c23d90{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:35:16,210] org.eclipse.jetty.server.Server: jetty-9.4.6.v20170531
+INFO  [2017-10-21 17:35:16,854] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    POST    /ad (com.adcampaign.resources.AdResource)
+    GET     /ad/activeads (com.adcampaign.resources.AdResource)
+    GET     /ad/{partnerId} (com.adcampaign.resources.AdResource)
+    GET     /swagger (io.federecio.dropwizard.swagger.SwaggerResource)
+    GET     /swagger.{type:json|yaml} (io.swagger.jaxrs.listing.ApiListingResource)
+
+INFO  [2017-10-21 17:35:16,856] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@2e8986b6{/,null,AVAILABLE}
+INFO  [2017-10-21 17:35:16,862] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2017-10-21 17:35:16,867] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@71eff6a3{/,null,AVAILABLE}
+INFO  [2017-10-21 17:35:16,879] org.eclipse.jetty.server.AbstractConnector: Started application@74c7522c{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:35:16,879] org.eclipse.jetty.server.AbstractConnector: Started admin@77c23d90{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:35:16,880] org.eclipse.jetty.server.Server: Started @3335ms
+INFO  [2017-10-21 17:35:52,703] org.eclipse.jetty.server.AbstractConnector: Stopped application@74c7522c{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:35:52,704] org.eclipse.jetty.server.AbstractConnector: Stopped admin@77c23d90{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:35:52,705] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@71eff6a3{/,null,UNAVAILABLE}
+INFO  [2017-10-21 17:35:52,708] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@2e8986b6{/,null,UNAVAILABLE}
+INFO  [2017-10-21 17:35:55,658] org.eclipse.jetty.util.log: Logging initialized @1754ms to org.eclipse.jetty.util.log.Slf4jLog
+INFO  [2017-10-21 17:35:55,815] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 17:35:55,817] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 17:35:55,819] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-assets for path /swagger-static/*
+INFO  [2017-10-21 17:35:55,850] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-oauth2-connect for path /o2c.html/*
+INFO  [2017-10-21 17:35:55,913] org.reflections.Reflections: Reflections took 43 ms to scan 1 urls, producing 32 keys and 34 values 
+INFO  [2017-10-21 17:35:56,016] org.mongodb.morphia.logging.MorphiaLoggerFactory: LoggerImplFactory set to org.mongodb.morphia.logging.jdk.JDKLoggerFactory
+INFO  [2017-10-21 17:35:56,453] org.mongodb.driver.cluster: Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+INFO  [2017-10-21 17:35:56,454] org.mongodb.driver.cluster: Adding discovered server localhost:27017 to client view of cluster
+INFO  [2017-10-21 17:35:56,530] com.adcampaign.AdcampaignApplication: Using permanent storage.
+INFO  [2017-10-21 17:35:56,530] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 17:35:56,530] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 17:35:56,535] org.mongodb.driver.connection: Opened connection [connectionId{localValue:1, serverValue:131}] to localhost:27017
+INFO  [2017-10-21 17:35:56,537] org.mongodb.driver.cluster: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 6]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=530545}
+INFO  [2017-10-21 17:35:56,538] org.mongodb.driver.cluster: Discovered cluster type of STANDALONE
+INFO  [2017-10-21 17:35:56,540] io.dropwizard.server.ServerFactory: Starting adcampaign
+================================================================================
+
+                              adcampaign
+
+================================================================================
+
+
+INFO  [2017-10-21 17:35:56,652] org.eclipse.jetty.setuid.SetUIDListener: Opened application@77c23d90{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:35:56,652] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@6d17914a{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:35:56,654] org.eclipse.jetty.server.Server: jetty-9.4.6.v20170531
+INFO  [2017-10-21 17:35:57,252] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    POST    /ad (com.adcampaign.resources.AdResource)
+    GET     /ad/activeads (com.adcampaign.resources.AdResource)
+    GET     /ad/{partnerId} (com.adcampaign.resources.AdResource)
+    GET     /swagger (io.federecio.dropwizard.swagger.SwaggerResource)
+    GET     /swagger.{type:json|yaml} (io.swagger.jaxrs.listing.ApiListingResource)
+
+INFO  [2017-10-21 17:35:57,254] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@5724c7da{/,null,AVAILABLE}
+INFO  [2017-10-21 17:35:57,258] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2017-10-21 17:35:57,263] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@574218f{/,null,AVAILABLE}
+INFO  [2017-10-21 17:35:57,273] org.eclipse.jetty.server.AbstractConnector: Started application@77c23d90{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:35:57,273] org.eclipse.jetty.server.AbstractConnector: Started admin@6d17914a{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:35:57,273] org.eclipse.jetty.server.Server: Started @3371ms
+INFO  [2017-10-21 17:36:16,974] org.mongodb.driver.connection: Opened connection [connectionId{localValue:2, serverValue:132}] to localhost:27017
+ERROR [2017-10-21 17:36:17,065] io.dropwizard.jersey.errors.LoggingExceptionMapper: Error handling a request: ae799e2a7c82ce45
+! java.lang.NullPointerException: null
+! at com.adcampaign.db.impl.AdDaoMongo.upsert(AdDaoMongo.java:27)
+! at com.adcampaign.service.impl.AdManagerImpl.createAd(AdManagerImpl.java:31)
+! at com.adcampaign.resources.AdResource.createAd(AdResource.java:35)
+! at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+! at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+! at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+! at java.lang.reflect.Method.invoke(Method.java:498)
+! at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+! at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+! at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+! at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+! at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+! at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+! at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:473)
+! at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:427)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:388)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:341)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:228)
+! at io.dropwizard.jetty.NonblockingServletHolder.handle(NonblockingServletHolder.java:49)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+! at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:34)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1637)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:50)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:44)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1637)
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+! at com.codahale.metrics.jetty9.InstrumentedHandler.handle(InstrumentedHandler.java:241)
+! at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+! at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:454)
+! at io.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:68)
+! at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:56)
+! at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:169)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+! at org.eclipse.jetty.server.Server.handle(Server.java:564)
+! at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+! at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+! at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+! at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+! at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+! at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+! at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+! at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+! at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:126)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:673)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:591)
+! at java.lang.Thread.run(Thread.java:748)
+INFO  [2017-10-21 17:37:38,942] org.eclipse.jetty.server.AbstractConnector: Stopped application@77c23d90{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:37:38,943] org.eclipse.jetty.server.AbstractConnector: Stopped admin@6d17914a{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:37:38,944] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@574218f{/,null,UNAVAILABLE}
+INFO  [2017-10-21 17:37:38,947] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@5724c7da{/,null,UNAVAILABLE}
+INFO  [2017-10-21 17:37:38,949] org.mongodb.driver.connection: Closed connection [connectionId{localValue:2, serverValue:132}] to localhost:27017 because the pool has been closed.
+INFO  [2017-10-21 17:37:43,704] org.eclipse.jetty.util.log: Logging initialized @1903ms to org.eclipse.jetty.util.log.Slf4jLog
+INFO  [2017-10-21 17:37:43,817] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 17:37:43,818] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 17:37:43,820] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-assets for path /swagger-static/*
+INFO  [2017-10-21 17:37:43,847] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-oauth2-connect for path /o2c.html/*
+INFO  [2017-10-21 17:37:43,904] org.reflections.Reflections: Reflections took 38 ms to scan 1 urls, producing 32 keys and 34 values 
+INFO  [2017-10-21 17:37:44,009] org.mongodb.morphia.logging.MorphiaLoggerFactory: LoggerImplFactory set to org.mongodb.morphia.logging.jdk.JDKLoggerFactory
+INFO  [2017-10-21 17:37:44,298] org.mongodb.driver.cluster: Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+INFO  [2017-10-21 17:37:44,298] org.mongodb.driver.cluster: Adding discovered server localhost:27017 to client view of cluster
+INFO  [2017-10-21 17:37:44,361] com.adcampaign.AdcampaignApplication: Using permanent storage.
+INFO  [2017-10-21 17:37:44,361] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 17:37:44,361] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 17:37:44,367] org.mongodb.driver.connection: Opened connection [connectionId{localValue:1, serverValue:135}] to localhost:27017
+INFO  [2017-10-21 17:37:44,368] org.mongodb.driver.cluster: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 6]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=569540}
+INFO  [2017-10-21 17:37:44,369] org.mongodb.driver.cluster: Discovered cluster type of STANDALONE
+INFO  [2017-10-21 17:37:44,370] io.dropwizard.server.ServerFactory: Starting adcampaign
+================================================================================
+
+                              adcampaign
+
+================================================================================
+
+
+INFO  [2017-10-21 17:37:44,460] org.eclipse.jetty.setuid.SetUIDListener: Opened application@5c9e8a67{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:37:44,460] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@2262f0d8{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:37:44,462] org.eclipse.jetty.server.Server: jetty-9.4.6.v20170531
+INFO  [2017-10-21 17:37:44,972] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    POST    /ad (com.adcampaign.resources.AdResource)
+    GET     /ad/activeads (com.adcampaign.resources.AdResource)
+    GET     /ad/{partnerId} (com.adcampaign.resources.AdResource)
+    GET     /swagger (io.federecio.dropwizard.swagger.SwaggerResource)
+    GET     /swagger.{type:json|yaml} (io.swagger.jaxrs.listing.ApiListingResource)
+
+INFO  [2017-10-21 17:37:44,974] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@3d98729a{/,null,AVAILABLE}
+INFO  [2017-10-21 17:37:44,978] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2017-10-21 17:37:44,983] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@4cc89246{/,null,AVAILABLE}
+INFO  [2017-10-21 17:37:44,991] org.eclipse.jetty.server.AbstractConnector: Started application@5c9e8a67{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:37:44,992] org.eclipse.jetty.server.AbstractConnector: Started admin@2262f0d8{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:37:44,992] org.eclipse.jetty.server.Server: Started @3192ms
+INFO  [2017-10-21 17:37:46,759] org.mongodb.driver.connection: Opened connection [connectionId{localValue:2, serverValue:136}] to localhost:27017
+ERROR [2017-10-21 17:53:22,499] io.dropwizard.jersey.errors.LoggingExceptionMapper: Error handling a request: 97ec7188b870e57f
+! java.lang.NullPointerException: null
+! at com.adcampaign.db.impl.AdDaoMongo.upsert(AdDaoMongo.java:29)
+! at com.adcampaign.service.impl.AdManagerImpl.createAd(AdManagerImpl.java:31)
+! at com.adcampaign.resources.AdResource.createAd(AdResource.java:35)
+! at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+! at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+! at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+! at java.lang.reflect.Method.invoke(Method.java:498)
+! at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+! at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+! at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+! at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+! at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+! at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+! at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:473)
+! at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:427)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:388)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:341)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:228)
+! at io.dropwizard.jetty.NonblockingServletHolder.handle(NonblockingServletHolder.java:49)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+! at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:34)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1637)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:50)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:44)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1637)
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+! at com.codahale.metrics.jetty9.InstrumentedHandler.handle(InstrumentedHandler.java:241)
+! at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+! at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:454)
+! at io.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:68)
+! at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:56)
+! at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:169)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+! at org.eclipse.jetty.server.Server.handle(Server.java:564)
+! at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+! at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+! at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+! at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+! at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+! at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+! at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+! at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+! at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:126)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:673)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:591)
+! at java.lang.Thread.run(Thread.java:748)
+INFO  [2017-10-21 17:53:22,569] org.eclipse.jetty.server.AbstractConnector: Stopped application@5c9e8a67{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:53:22,569] org.eclipse.jetty.server.AbstractConnector: Stopped admin@2262f0d8{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:53:22,570] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@4cc89246{/,null,UNAVAILABLE}
+INFO  [2017-10-21 17:53:22,573] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@3d98729a{/,null,UNAVAILABLE}
+INFO  [2017-10-21 17:53:22,575] org.mongodb.driver.connection: Closed connection [connectionId{localValue:2, serverValue:136}] to localhost:27017 because the pool has been closed.
+INFO  [2017-10-21 17:53:27,500] org.eclipse.jetty.util.log: Logging initialized @1849ms to org.eclipse.jetty.util.log.Slf4jLog
+INFO  [2017-10-21 17:53:27,667] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 17:53:27,669] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 17:53:27,671] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-assets for path /swagger-static/*
+INFO  [2017-10-21 17:53:27,705] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-oauth2-connect for path /o2c.html/*
+INFO  [2017-10-21 17:53:27,772] org.reflections.Reflections: Reflections took 42 ms to scan 1 urls, producing 34 keys and 36 values 
+INFO  [2017-10-21 17:53:27,879] org.mongodb.morphia.logging.MorphiaLoggerFactory: LoggerImplFactory set to org.mongodb.morphia.logging.jdk.JDKLoggerFactory
+INFO  [2017-10-21 17:53:28,243] org.mongodb.driver.cluster: Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+INFO  [2017-10-21 17:53:28,243] org.mongodb.driver.cluster: Adding discovered server localhost:27017 to client view of cluster
+INFO  [2017-10-21 17:53:28,322] org.mongodb.driver.connection: Opened connection [connectionId{localValue:1, serverValue:137}] to localhost:27017
+INFO  [2017-10-21 17:53:28,324] com.adcampaign.AdcampaignApplication: Using permanent storage.
+INFO  [2017-10-21 17:53:28,324] org.mongodb.driver.cluster: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 6]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=531492}
+INFO  [2017-10-21 17:53:28,324] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 17:53:28,324] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 17:53:28,325] org.mongodb.driver.cluster: Discovered cluster type of STANDALONE
+INFO  [2017-10-21 17:53:28,330] io.dropwizard.server.ServerFactory: Starting adcampaign
+================================================================================
+
+                              adcampaign
+
+================================================================================
+
+
+INFO  [2017-10-21 17:53:28,416] org.eclipse.jetty.setuid.SetUIDListener: Opened application@5885e231{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:53:28,416] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@47eaf55c{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:53:28,418] org.eclipse.jetty.server.Server: jetty-9.4.6.v20170531
+INFO  [2017-10-21 17:53:29,027] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    POST    /ad (com.adcampaign.resources.AdResource)
+    GET     /ad/activeads (com.adcampaign.resources.AdResource)
+    GET     /ad/{partnerId} (com.adcampaign.resources.AdResource)
+    GET     /swagger (io.federecio.dropwizard.swagger.SwaggerResource)
+    GET     /swagger.{type:json|yaml} (io.swagger.jaxrs.listing.ApiListingResource)
+
+INFO  [2017-10-21 17:53:29,029] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@68f69ca3{/,null,AVAILABLE}
+INFO  [2017-10-21 17:53:29,036] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2017-10-21 17:53:29,043] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@45790cb{/,null,AVAILABLE}
+INFO  [2017-10-21 17:53:29,056] org.eclipse.jetty.server.AbstractConnector: Started application@5885e231{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:53:29,057] org.eclipse.jetty.server.AbstractConnector: Started admin@47eaf55c{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:53:29,071] org.eclipse.jetty.server.Server: Started @3423ms
+ERROR [2017-10-21 17:53:34,432] io.dropwizard.jersey.errors.LoggingExceptionMapper: Error handling a request: 2fff71579bc28a82
+! java.lang.IllegalArgumentException: null
+! at org.bson.types.ObjectId.isValid(ObjectId.java:91)
+! at org.bson.types.ObjectId.parseHexString(ObjectId.java:548)
+! at org.bson.types.ObjectId.<init>(ObjectId.java:239)
+! at com.adcampaign.converter.AdConverter.convertToMongoDbAd(AdConverter.java:66)
+! at com.adcampaign.db.impl.AdDaoMongo.upsert(AdDaoMongo.java:30)
+! at com.adcampaign.service.impl.AdManagerImpl.createAd(AdManagerImpl.java:31)
+! at com.adcampaign.resources.AdResource.createAd(AdResource.java:35)
+! at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+! at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+! at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+! at java.lang.reflect.Method.invoke(Method.java:498)
+! at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+! at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+! at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+! at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+! at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+! at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+! at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:473)
+! at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:427)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:388)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:341)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:228)
+! at io.dropwizard.jetty.NonblockingServletHolder.handle(NonblockingServletHolder.java:49)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+! at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:34)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1637)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:50)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:44)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1637)
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+! at com.codahale.metrics.jetty9.InstrumentedHandler.handle(InstrumentedHandler.java:241)
+! at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+! at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:454)
+! at io.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:68)
+! at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:56)
+! at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:169)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+! at org.eclipse.jetty.server.Server.handle(Server.java:564)
+! at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+! at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+! at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+! at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+! at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+! at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+! at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+! at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+! at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:126)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:673)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:591)
+! at java.lang.Thread.run(Thread.java:748)
+INFO  [2017-10-21 17:55:10,727] org.eclipse.jetty.server.AbstractConnector: Stopped application@5885e231{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:55:10,727] org.eclipse.jetty.server.AbstractConnector: Stopped admin@47eaf55c{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:55:10,729] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@45790cb{/,null,UNAVAILABLE}
+INFO  [2017-10-21 17:55:10,731] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@68f69ca3{/,null,UNAVAILABLE}
+INFO  [2017-10-21 17:55:16,436] org.eclipse.jetty.util.log: Logging initialized @3094ms to org.eclipse.jetty.util.log.Slf4jLog
+INFO  [2017-10-21 17:55:16,548] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 17:55:16,549] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 17:55:16,552] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-assets for path /swagger-static/*
+INFO  [2017-10-21 17:55:16,578] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-oauth2-connect for path /o2c.html/*
+INFO  [2017-10-21 17:55:16,635] org.reflections.Reflections: Reflections took 38 ms to scan 1 urls, producing 34 keys and 36 values 
+INFO  [2017-10-21 17:55:16,732] org.mongodb.morphia.logging.MorphiaLoggerFactory: LoggerImplFactory set to org.mongodb.morphia.logging.jdk.JDKLoggerFactory
+INFO  [2017-10-21 17:55:17,032] org.mongodb.driver.cluster: Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+INFO  [2017-10-21 17:55:17,033] org.mongodb.driver.cluster: Adding discovered server localhost:27017 to client view of cluster
+INFO  [2017-10-21 17:55:17,102] org.mongodb.driver.connection: Opened connection [connectionId{localValue:1, serverValue:138}] to localhost:27017
+INFO  [2017-10-21 17:55:17,102] com.adcampaign.AdcampaignApplication: Using permanent storage.
+INFO  [2017-10-21 17:55:17,102] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 17:55:17,102] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 17:55:17,104] org.mongodb.driver.cluster: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 6]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=499702}
+INFO  [2017-10-21 17:55:17,105] org.mongodb.driver.cluster: Discovered cluster type of STANDALONE
+INFO  [2017-10-21 17:55:17,111] io.dropwizard.server.ServerFactory: Starting adcampaign
+================================================================================
+
+                              adcampaign
+
+================================================================================
+
+
+INFO  [2017-10-21 17:55:17,195] org.eclipse.jetty.setuid.SetUIDListener: Opened application@e07b4db{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:55:17,195] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@76b305e1{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:55:17,197] org.eclipse.jetty.server.Server: jetty-9.4.6.v20170531
+INFO  [2017-10-21 17:55:17,700] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    POST    /ad (com.adcampaign.resources.AdResource)
+    GET     /ad/activeads (com.adcampaign.resources.AdResource)
+    GET     /ad/{partnerId} (com.adcampaign.resources.AdResource)
+    GET     /swagger (io.federecio.dropwizard.swagger.SwaggerResource)
+    GET     /swagger.{type:json|yaml} (io.swagger.jaxrs.listing.ApiListingResource)
+
+INFO  [2017-10-21 17:55:17,702] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@388e4c25{/,null,AVAILABLE}
+INFO  [2017-10-21 17:55:17,708] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2017-10-21 17:55:17,714] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@35d4035f{/,null,AVAILABLE}
+INFO  [2017-10-21 17:55:17,723] org.eclipse.jetty.server.AbstractConnector: Started application@e07b4db{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:55:17,724] org.eclipse.jetty.server.AbstractConnector: Started admin@76b305e1{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:55:17,724] org.eclipse.jetty.server.Server: Started @4383ms
+ERROR [2017-10-21 17:55:27,523] io.dropwizard.jersey.errors.LoggingExceptionMapper: Error handling a request: e7a18105c92b6c65
+! java.lang.IllegalArgumentException: null
+! at org.bson.types.ObjectId.isValid(ObjectId.java:91)
+! at com.adcampaign.converter.AdConverter.convertToMongoDbAd(AdConverter.java:66)
+! at com.adcampaign.db.impl.AdDaoMongo.upsert(AdDaoMongo.java:30)
+! at com.adcampaign.service.impl.AdManagerImpl.createAd(AdManagerImpl.java:31)
+! at com.adcampaign.resources.AdResource.createAd(AdResource.java:35)
+! at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+! at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+! at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+! at java.lang.reflect.Method.invoke(Method.java:498)
+! at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+! at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+! at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+! at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+! at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+! at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+! at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:473)
+! at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:427)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:388)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:341)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:228)
+! at io.dropwizard.jetty.NonblockingServletHolder.handle(NonblockingServletHolder.java:49)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+! at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:34)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1637)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:50)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:44)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1637)
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+! at com.codahale.metrics.jetty9.InstrumentedHandler.handle(InstrumentedHandler.java:241)
+! at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+! at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:454)
+! at io.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:68)
+! at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:56)
+! at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:169)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+! at org.eclipse.jetty.server.Server.handle(Server.java:564)
+! at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+! at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+! at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+! at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+! at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+! at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+! at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+! at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+! at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:126)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:673)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:591)
+! at java.lang.Thread.run(Thread.java:748)
+ERROR [2017-10-21 17:56:35,397] io.dropwizard.jersey.errors.LoggingExceptionMapper: Error handling a request: a8a9acbe2201c240
+! java.lang.IllegalArgumentException: null
+! at org.bson.types.ObjectId.isValid(ObjectId.java:91)
+! at com.adcampaign.converter.AdConverter.convertToMongoDbAd(AdConverter.java:66)
+! at com.adcampaign.db.impl.AdDaoMongo.upsert(AdDaoMongo.java:30)
+! at com.adcampaign.service.impl.AdManagerImpl.createAd(AdManagerImpl.java:31)
+! at com.adcampaign.resources.AdResource.createAd(AdResource.java:35)
+! at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+! at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+! at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+! at java.lang.reflect.Method.invoke(Method.java:498)
+! at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+! at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+! at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+! at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+! at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+! at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+! at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:473)
+! at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:427)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:388)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:341)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:228)
+! at io.dropwizard.jetty.NonblockingServletHolder.handle(NonblockingServletHolder.java:49)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+! at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:34)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1637)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:50)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:44)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1637)
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+! at com.codahale.metrics.jetty9.InstrumentedHandler.handle(InstrumentedHandler.java:241)
+! at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+! at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:454)
+! at io.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:68)
+! at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:56)
+! at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:169)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+! at org.eclipse.jetty.server.Server.handle(Server.java:564)
+! at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+! at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+! at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+! at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+! at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+! at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+! at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+! at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+! at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:199)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:673)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:591)
+! at java.lang.Thread.run(Thread.java:748)
+INFO  [2017-10-21 17:56:35,447] org.eclipse.jetty.server.AbstractConnector: Stopped application@e07b4db{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:56:35,448] org.eclipse.jetty.server.AbstractConnector: Stopped admin@76b305e1{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:56:35,449] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@35d4035f{/,null,UNAVAILABLE}
+INFO  [2017-10-21 17:56:35,452] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@388e4c25{/,null,UNAVAILABLE}
+INFO  [2017-10-21 17:56:38,612] org.eclipse.jetty.util.log: Logging initialized @1544ms to org.eclipse.jetty.util.log.Slf4jLog
+INFO  [2017-10-21 17:56:38,726] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 17:56:38,728] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 17:56:38,730] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-assets for path /swagger-static/*
+INFO  [2017-10-21 17:56:38,760] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-oauth2-connect for path /o2c.html/*
+INFO  [2017-10-21 17:56:38,816] org.reflections.Reflections: Reflections took 37 ms to scan 1 urls, producing 34 keys and 36 values 
+INFO  [2017-10-21 17:56:38,907] org.mongodb.morphia.logging.MorphiaLoggerFactory: LoggerImplFactory set to org.mongodb.morphia.logging.jdk.JDKLoggerFactory
+INFO  [2017-10-21 17:56:39,238] org.mongodb.driver.cluster: Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+INFO  [2017-10-21 17:56:39,239] org.mongodb.driver.cluster: Adding discovered server localhost:27017 to client view of cluster
+INFO  [2017-10-21 17:56:39,365] org.mongodb.driver.connection: Opened connection [connectionId{localValue:1, serverValue:139}] to localhost:27017
+INFO  [2017-10-21 17:56:39,370] org.mongodb.driver.cluster: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 6]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=3563122}
+INFO  [2017-10-21 17:56:39,371] com.adcampaign.AdcampaignApplication: Using permanent storage.
+INFO  [2017-10-21 17:56:39,371] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 17:56:39,371] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 17:56:39,371] org.mongodb.driver.cluster: Discovered cluster type of STANDALONE
+INFO  [2017-10-21 17:56:39,380] io.dropwizard.server.ServerFactory: Starting adcampaign
+================================================================================
+
+                              adcampaign
+
+================================================================================
+
+
+INFO  [2017-10-21 17:56:39,504] org.eclipse.jetty.setuid.SetUIDListener: Opened application@5885e231{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:56:39,504] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@47eaf55c{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:56:39,507] org.eclipse.jetty.server.Server: jetty-9.4.6.v20170531
+INFO  [2017-10-21 17:56:40,212] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    POST    /ad (com.adcampaign.resources.AdResource)
+    GET     /ad/activeads (com.adcampaign.resources.AdResource)
+    GET     /ad/{partnerId} (com.adcampaign.resources.AdResource)
+    GET     /swagger (io.federecio.dropwizard.swagger.SwaggerResource)
+    GET     /swagger.{type:json|yaml} (io.swagger.jaxrs.listing.ApiListingResource)
+
+INFO  [2017-10-21 17:56:40,214] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@68f69ca3{/,null,AVAILABLE}
+INFO  [2017-10-21 17:56:40,220] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2017-10-21 17:56:40,227] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@45790cb{/,null,AVAILABLE}
+INFO  [2017-10-21 17:56:40,238] org.eclipse.jetty.server.AbstractConnector: Started application@5885e231{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:56:40,239] org.eclipse.jetty.server.AbstractConnector: Started admin@47eaf55c{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:56:40,240] org.eclipse.jetty.server.Server: Started @3173ms
+ERROR [2017-10-21 17:57:27,677] io.dropwizard.jersey.errors.LoggingExceptionMapper: Error handling a request: 67b683716f39f1be
+! java.lang.IllegalArgumentException: null
+! at org.bson.types.ObjectId.isValid(ObjectId.java:91)
+! at com.adcampaign.converter.AdConverter.convertToMongoDbAd(AdConverter.java:66)
+! at com.adcampaign.db.impl.AdDaoMongo.upsert(AdDaoMongo.java:30)
+! at com.adcampaign.service.impl.AdManagerImpl.createAd(AdManagerImpl.java:31)
+! at com.adcampaign.resources.AdResource.createAd(AdResource.java:35)
+! at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+! at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+! at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+! at java.lang.reflect.Method.invoke(Method.java:498)
+! at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+! at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+! at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+! at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+! at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+! at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+! at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:473)
+! at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:427)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:388)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:341)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:228)
+! at io.dropwizard.jetty.NonblockingServletHolder.handle(NonblockingServletHolder.java:49)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+! at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:34)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1637)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:50)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:44)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1637)
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+! at com.codahale.metrics.jetty9.InstrumentedHandler.handle(InstrumentedHandler.java:241)
+! at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+! at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:454)
+! at io.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:68)
+! at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:56)
+! at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:169)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+! at org.eclipse.jetty.server.Server.handle(Server.java:564)
+! at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+! at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+! at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+! at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+! at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+! at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+! at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+! at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+! at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:126)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:673)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:591)
+! at java.lang.Thread.run(Thread.java:748)
+ERROR [2017-10-21 17:58:01,731] io.dropwizard.jersey.errors.LoggingExceptionMapper: Error handling a request: 4ee426a86ca3f1a0
+! java.lang.IllegalArgumentException: null
+! at org.bson.types.ObjectId.isValid(ObjectId.java:91)
+! at com.adcampaign.converter.AdConverter.convertToMongoDbAd(AdConverter.java:66)
+! at com.adcampaign.db.impl.AdDaoMongo.upsert(AdDaoMongo.java:30)
+! at com.adcampaign.service.impl.AdManagerImpl.createAd(AdManagerImpl.java:31)
+! at com.adcampaign.resources.AdResource.createAd(AdResource.java:35)
+! at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+! at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+! at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+! at java.lang.reflect.Method.invoke(Method.java:498)
+! at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+! at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+! at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+! at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+! at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+! at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+! at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:473)
+! at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:427)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:388)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:341)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:228)
+! at io.dropwizard.jetty.NonblockingServletHolder.handle(NonblockingServletHolder.java:49)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+! at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:34)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1637)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:50)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:44)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1637)
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+! at com.codahale.metrics.jetty9.InstrumentedHandler.handle(InstrumentedHandler.java:241)
+! at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+! at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:454)
+! at io.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:68)
+! at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:56)
+! at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:169)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+! at org.eclipse.jetty.server.Server.handle(Server.java:564)
+! at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+! at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+! at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+! at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+! at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+! at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+! at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+! at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+! at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:199)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:673)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:591)
+! at java.lang.Thread.run(Thread.java:748)
+INFO  [2017-10-21 17:58:01,797] org.eclipse.jetty.server.AbstractConnector: Stopped application@5885e231{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:58:01,798] org.eclipse.jetty.server.AbstractConnector: Stopped admin@47eaf55c{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:58:01,799] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@45790cb{/,null,UNAVAILABLE}
+INFO  [2017-10-21 17:58:01,802] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@68f69ca3{/,null,UNAVAILABLE}
+INFO  [2017-10-21 17:58:05,002] org.eclipse.jetty.util.log: Logging initialized @1718ms to org.eclipse.jetty.util.log.Slf4jLog
+INFO  [2017-10-21 17:58:05,117] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 17:58:05,119] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 17:58:05,121] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-assets for path /swagger-static/*
+INFO  [2017-10-21 17:58:05,157] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-oauth2-connect for path /o2c.html/*
+INFO  [2017-10-21 17:58:05,231] org.reflections.Reflections: Reflections took 43 ms to scan 1 urls, producing 34 keys and 36 values 
+INFO  [2017-10-21 17:58:05,346] org.mongodb.morphia.logging.MorphiaLoggerFactory: LoggerImplFactory set to org.mongodb.morphia.logging.jdk.JDKLoggerFactory
+INFO  [2017-10-21 17:58:05,749] org.mongodb.driver.cluster: Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+INFO  [2017-10-21 17:58:05,749] org.mongodb.driver.cluster: Adding discovered server localhost:27017 to client view of cluster
+INFO  [2017-10-21 17:58:05,826] org.mongodb.driver.connection: Opened connection [connectionId{localValue:1, serverValue:140}] to localhost:27017
+INFO  [2017-10-21 17:58:05,829] org.mongodb.driver.cluster: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 6]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=693730}
+INFO  [2017-10-21 17:58:05,830] org.mongodb.driver.cluster: Discovered cluster type of STANDALONE
+INFO  [2017-10-21 17:58:05,928] com.adcampaign.AdcampaignApplication: Using permanent storage.
+INFO  [2017-10-21 17:58:05,929] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 17:58:05,929] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 17:58:05,937] io.dropwizard.server.ServerFactory: Starting adcampaign
+================================================================================
+
+                              adcampaign
+
+================================================================================
+
+
+INFO  [2017-10-21 17:58:06,067] org.eclipse.jetty.setuid.SetUIDListener: Opened application@5896cb9c{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:58:06,067] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@44b9c7c4{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:58:06,070] org.eclipse.jetty.server.Server: jetty-9.4.6.v20170531
+INFO  [2017-10-21 17:58:06,656] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    POST    /ad (com.adcampaign.resources.AdResource)
+    GET     /ad/activeads (com.adcampaign.resources.AdResource)
+    GET     /ad/{partnerId} (com.adcampaign.resources.AdResource)
+    GET     /swagger (io.federecio.dropwizard.swagger.SwaggerResource)
+    GET     /swagger.{type:json|yaml} (io.swagger.jaxrs.listing.ApiListingResource)
+
+INFO  [2017-10-21 17:58:06,658] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@106802ea{/,null,AVAILABLE}
+INFO  [2017-10-21 17:58:06,662] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2017-10-21 17:58:06,667] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@53079ae6{/,null,AVAILABLE}
+INFO  [2017-10-21 17:58:06,678] org.eclipse.jetty.server.AbstractConnector: Started application@5896cb9c{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:58:06,679] org.eclipse.jetty.server.AbstractConnector: Started admin@44b9c7c4{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:58:06,679] org.eclipse.jetty.server.Server: Started @3396ms
+INFO  [2017-10-21 17:58:58,570] org.eclipse.jetty.server.AbstractConnector: Stopped application@5896cb9c{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:58:58,571] org.eclipse.jetty.server.AbstractConnector: Stopped admin@44b9c7c4{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:58:58,572] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@53079ae6{/,null,UNAVAILABLE}
+INFO  [2017-10-21 17:58:58,575] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@106802ea{/,null,UNAVAILABLE}
+INFO  [2017-10-21 17:59:03,079] org.eclipse.jetty.util.log: Logging initialized @1601ms to org.eclipse.jetty.util.log.Slf4jLog
+INFO  [2017-10-21 17:59:03,210] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 17:59:03,212] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 17:59:03,214] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-assets for path /swagger-static/*
+INFO  [2017-10-21 17:59:03,245] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-oauth2-connect for path /o2c.html/*
+INFO  [2017-10-21 17:59:03,309] org.reflections.Reflections: Reflections took 43 ms to scan 1 urls, producing 34 keys and 36 values 
+INFO  [2017-10-21 17:59:03,426] org.mongodb.morphia.logging.MorphiaLoggerFactory: LoggerImplFactory set to org.mongodb.morphia.logging.jdk.JDKLoggerFactory
+INFO  [2017-10-21 17:59:03,768] org.mongodb.driver.cluster: Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+INFO  [2017-10-21 17:59:03,768] org.mongodb.driver.cluster: Adding discovered server localhost:27017 to client view of cluster
+INFO  [2017-10-21 17:59:03,836] com.adcampaign.AdcampaignApplication: Using permanent storage.
+INFO  [2017-10-21 17:59:03,836] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 17:59:03,836] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 17:59:03,840] org.mongodb.driver.connection: Opened connection [connectionId{localValue:1, serverValue:141}] to localhost:27017
+INFO  [2017-10-21 17:59:03,842] org.mongodb.driver.cluster: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 6]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=510571}
+INFO  [2017-10-21 17:59:03,843] org.mongodb.driver.cluster: Discovered cluster type of STANDALONE
+INFO  [2017-10-21 17:59:03,844] io.dropwizard.server.ServerFactory: Starting adcampaign
+================================================================================
+
+                              adcampaign
+
+================================================================================
+
+
+INFO  [2017-10-21 17:59:03,931] org.eclipse.jetty.setuid.SetUIDListener: Opened application@76b305e1{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:59:03,931] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@6be766d1{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:59:03,933] org.eclipse.jetty.server.Server: jetty-9.4.6.v20170531
+INFO  [2017-10-21 17:59:04,460] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    POST    /ad (com.adcampaign.resources.AdResource)
+    GET     /ad/activeads (com.adcampaign.resources.AdResource)
+    GET     /ad/{partnerId} (com.adcampaign.resources.AdResource)
+    GET     /swagger (io.federecio.dropwizard.swagger.SwaggerResource)
+    GET     /swagger.{type:json|yaml} (io.swagger.jaxrs.listing.ApiListingResource)
+
+INFO  [2017-10-21 17:59:04,462] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@12532e37{/,null,AVAILABLE}
+INFO  [2017-10-21 17:59:04,466] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2017-10-21 17:59:04,472] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@6f4fc83f{/,null,AVAILABLE}
+INFO  [2017-10-21 17:59:04,499] org.eclipse.jetty.server.AbstractConnector: Started application@76b305e1{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:59:04,499] org.eclipse.jetty.server.AbstractConnector: Started admin@6be766d1{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:59:04,499] org.eclipse.jetty.server.Server: Started @3022ms
+ERROR [2017-10-21 17:59:07,295] io.dropwizard.jersey.errors.LoggingExceptionMapper: Error handling a request: 16c979fd8c24432b
+! java.lang.IllegalArgumentException: null
+! at org.bson.types.ObjectId.isValid(ObjectId.java:91)
+! at com.adcampaign.converter.AdConverter.convertToMongoDbAd(AdConverter.java:66)
+! at com.adcampaign.db.impl.AdDaoMongo.upsert(AdDaoMongo.java:30)
+! at com.adcampaign.service.impl.AdManagerImpl.createAd(AdManagerImpl.java:31)
+! at com.adcampaign.resources.AdResource.createAd(AdResource.java:35)
+! at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+! at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+! at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+! at java.lang.reflect.Method.invoke(Method.java:498)
+! at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+! at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+! at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+! at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+! at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+! at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+! at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:473)
+! at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:427)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:388)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:341)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:228)
+! at io.dropwizard.jetty.NonblockingServletHolder.handle(NonblockingServletHolder.java:49)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+! at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:34)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1637)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:50)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:44)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1637)
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+! at com.codahale.metrics.jetty9.InstrumentedHandler.handle(InstrumentedHandler.java:241)
+! at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+! at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:454)
+! at io.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:68)
+! at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:56)
+! at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:169)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+! at org.eclipse.jetty.server.Server.handle(Server.java:564)
+! at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+! at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+! at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+! at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+! at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+! at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+! at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+! at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+! at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:126)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:673)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:591)
+! at java.lang.Thread.run(Thread.java:748)
+INFO  [2017-10-21 17:59:28,265] org.eclipse.jetty.server.AbstractConnector: Stopped application@76b305e1{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:59:28,266] org.eclipse.jetty.server.AbstractConnector: Stopped admin@6be766d1{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:59:28,267] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@6f4fc83f{/,null,UNAVAILABLE}
+INFO  [2017-10-21 17:59:28,270] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@12532e37{/,null,UNAVAILABLE}
+INFO  [2017-10-21 17:59:31,268] org.eclipse.jetty.util.log: Logging initialized @1589ms to org.eclipse.jetty.util.log.Slf4jLog
+INFO  [2017-10-21 17:59:31,416] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 17:59:31,418] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 17:59:31,421] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-assets for path /swagger-static/*
+INFO  [2017-10-21 17:59:31,457] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-oauth2-connect for path /o2c.html/*
+INFO  [2017-10-21 17:59:31,519] org.reflections.Reflections: Reflections took 40 ms to scan 1 urls, producing 34 keys and 36 values 
+INFO  [2017-10-21 17:59:31,631] org.mongodb.morphia.logging.MorphiaLoggerFactory: LoggerImplFactory set to org.mongodb.morphia.logging.jdk.JDKLoggerFactory
+INFO  [2017-10-21 17:59:32,055] org.mongodb.driver.cluster: Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+INFO  [2017-10-21 17:59:32,056] org.mongodb.driver.cluster: Adding discovered server localhost:27017 to client view of cluster
+INFO  [2017-10-21 17:59:32,141] org.mongodb.driver.connection: Opened connection [connectionId{localValue:1, serverValue:142}] to localhost:27017
+INFO  [2017-10-21 17:59:32,144] org.mongodb.driver.cluster: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 6]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=580717}
+INFO  [2017-10-21 17:59:32,144] com.adcampaign.AdcampaignApplication: Using permanent storage.
+INFO  [2017-10-21 17:59:32,144] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 17:59:32,144] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 17:59:32,145] org.mongodb.driver.cluster: Discovered cluster type of STANDALONE
+INFO  [2017-10-21 17:59:32,152] io.dropwizard.server.ServerFactory: Starting adcampaign
+================================================================================
+
+                              adcampaign
+
+================================================================================
+
+
+INFO  [2017-10-21 17:59:32,258] org.eclipse.jetty.setuid.SetUIDListener: Opened application@31940704{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:59:32,258] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@e07b4db{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:59:32,260] org.eclipse.jetty.server.Server: jetty-9.4.6.v20170531
+INFO  [2017-10-21 17:59:32,810] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    POST    /ad (com.adcampaign.resources.AdResource)
+    GET     /ad/activeads (com.adcampaign.resources.AdResource)
+    GET     /ad/{partnerId} (com.adcampaign.resources.AdResource)
+    GET     /swagger (io.federecio.dropwizard.swagger.SwaggerResource)
+    GET     /swagger.{type:json|yaml} (io.swagger.jaxrs.listing.ApiListingResource)
+
+INFO  [2017-10-21 17:59:32,812] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@646d58cd{/,null,AVAILABLE}
+INFO  [2017-10-21 17:59:32,817] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2017-10-21 17:59:32,822] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@cef885d{/,null,AVAILABLE}
+INFO  [2017-10-21 17:59:32,832] org.eclipse.jetty.server.AbstractConnector: Started application@31940704{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 17:59:32,833] org.eclipse.jetty.server.AbstractConnector: Started admin@e07b4db{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 17:59:32,833] org.eclipse.jetty.server.Server: Started @3156ms
+INFO  [2017-10-21 17:59:39,961] org.mongodb.driver.connection: Opened connection [connectionId{localValue:2, serverValue:143}] to localhost:27017
+ERROR [2017-10-21 18:00:09,510] io.dropwizard.jersey.errors.LoggingExceptionMapper: Error handling a request: 029e0032c3695d78
+! java.lang.NullPointerException: null
+! at com.adcampaign.db.impl.AdDaoTempStorage.findLiveAds(AdDaoTempStorage.java:93)
+! at com.adcampaign.db.impl.AdDaoMongo.getAllAds(AdDaoMongo.java:71)
+! at com.adcampaign.service.impl.AdManagerImpl.getAllActiveAds(AdManagerImpl.java:60)
+! at com.adcampaign.resources.AdResource.getAllActiveAds(AdResource.java:49)
+! at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+! at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+! at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+! at java.lang.reflect.Method.invoke(Method.java:498)
+! at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+! at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+! at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+! at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+! at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+! at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+! at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:473)
+! at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:427)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:388)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:341)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:228)
+! at io.dropwizard.jetty.NonblockingServletHolder.handle(NonblockingServletHolder.java:49)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+! at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:34)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1637)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:50)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:44)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1637)
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+! at com.codahale.metrics.jetty9.InstrumentedHandler.handle(InstrumentedHandler.java:241)
+! at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+! at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:521)
+! at io.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:68)
+! at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:56)
+! at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:169)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+! at org.eclipse.jetty.server.Server.handle(Server.java:564)
+! at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+! at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+! at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+! at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+! at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+! at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+! at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+! at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+! at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:199)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:673)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:591)
+! at java.lang.Thread.run(Thread.java:748)
+ERROR [2017-10-21 18:03:54,679] io.dropwizard.jersey.errors.LoggingExceptionMapper: Error handling a request: f6b01e5b8928184b
+! java.lang.NullPointerException: null
+! at com.adcampaign.db.impl.AdDaoTempStorage.findLiveAds(AdDaoTempStorage.java:93)
+! at com.adcampaign.db.impl.AdDaoMongo.getAllAds(AdDaoMongo.java:71)
+! at com.adcampaign.service.impl.AdManagerImpl.getAllActiveAds(AdManagerImpl.java:60)
+! at com.adcampaign.resources.AdResource.getAllActiveAds(AdResource.java:49)
+! at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+! at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+! at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+! at java.lang.reflect.Method.invoke(Method.java:498)
+! at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+! at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+! at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+! at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+! at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+! at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+! at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+! at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+! at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:473)
+! at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:427)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:388)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:341)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:228)
+! at io.dropwizard.jetty.NonblockingServletHolder.handle(NonblockingServletHolder.java:49)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+! at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:34)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1637)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:50)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:44)
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1637)
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+! at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+! at com.codahale.metrics.jetty9.InstrumentedHandler.handle(InstrumentedHandler.java:241)
+! at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+! at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:521)
+! at io.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:68)
+! at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:56)
+! at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:169)
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+! at org.eclipse.jetty.server.Server.handle(Server.java:564)
+! at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+! at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+! at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+! at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+! at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+! at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+! at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+! at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+! at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:199)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:673)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:591)
+! at java.lang.Thread.run(Thread.java:748)
+INFO  [2017-10-21 18:03:54,727] org.eclipse.jetty.server.AbstractConnector: Stopped application@31940704{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 18:03:54,728] org.eclipse.jetty.server.AbstractConnector: Stopped admin@e07b4db{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 18:03:54,729] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@cef885d{/,null,UNAVAILABLE}
+INFO  [2017-10-21 18:03:54,732] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@646d58cd{/,null,UNAVAILABLE}
+INFO  [2017-10-21 18:03:54,734] org.mongodb.driver.connection: Closed connection [connectionId{localValue:2, serverValue:143}] to localhost:27017 because the pool has been closed.
+INFO  [2017-10-21 18:05:22,879] org.eclipse.jetty.util.log: Logging initialized @1775ms to org.eclipse.jetty.util.log.Slf4jLog
+INFO  [2017-10-21 18:05:22,996] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 18:05:22,997] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 18:05:22,999] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-assets for path /swagger-static/*
+INFO  [2017-10-21 18:05:23,029] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: swagger-oauth2-connect for path /o2c.html/*
+INFO  [2017-10-21 18:05:23,089] org.reflections.Reflections: Reflections took 40 ms to scan 1 urls, producing 34 keys and 36 values 
+INFO  [2017-10-21 18:05:23,189] org.mongodb.morphia.logging.MorphiaLoggerFactory: LoggerImplFactory set to org.mongodb.morphia.logging.jdk.JDKLoggerFactory
+INFO  [2017-10-21 18:05:23,545] org.mongodb.driver.cluster: Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+INFO  [2017-10-21 18:05:23,546] org.mongodb.driver.cluster: Adding discovered server localhost:27017 to client view of cluster
+INFO  [2017-10-21 18:05:23,619] org.mongodb.driver.connection: Opened connection [connectionId{localValue:1, serverValue:146}] to localhost:27017
+INFO  [2017-10-21 18:05:23,621] org.mongodb.driver.cluster: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 6]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=570532}
+INFO  [2017-10-21 18:05:23,621] com.adcampaign.AdcampaignApplication: Using permanent storage.
+INFO  [2017-10-21 18:05:23,621] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-10-21 18:05:23,622] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-10-21 18:05:23,622] org.mongodb.driver.cluster: Discovered cluster type of STANDALONE
+INFO  [2017-10-21 18:05:23,628] io.dropwizard.server.ServerFactory: Starting adcampaign
+================================================================================
+
+                              adcampaign
+
+================================================================================
+
+
+INFO  [2017-10-21 18:05:23,706] org.eclipse.jetty.setuid.SetUIDListener: Opened application@76b305e1{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 18:05:23,706] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@6be766d1{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 18:05:23,708] org.eclipse.jetty.server.Server: jetty-9.4.6.v20170531
+INFO  [2017-10-21 18:05:24,311] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    POST    /ad (com.adcampaign.resources.AdResource)
+    GET     /ad/activeads (com.adcampaign.resources.AdResource)
+    GET     /ad/{partnerId} (com.adcampaign.resources.AdResource)
+    GET     /swagger (io.federecio.dropwizard.swagger.SwaggerResource)
+    GET     /swagger.{type:json|yaml} (io.swagger.jaxrs.listing.ApiListingResource)
+
+INFO  [2017-10-21 18:05:24,313] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@12532e37{/,null,AVAILABLE}
+INFO  [2017-10-21 18:05:24,319] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2017-10-21 18:05:24,325] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@6f4fc83f{/,null,AVAILABLE}
+INFO  [2017-10-21 18:05:24,335] org.eclipse.jetty.server.AbstractConnector: Started application@76b305e1{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 18:05:24,336] org.eclipse.jetty.server.AbstractConnector: Started admin@6be766d1{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 18:05:24,336] org.eclipse.jetty.server.Server: Started @3233ms
+INFO  [2017-10-21 18:05:49,691] org.mongodb.driver.connection: Opened connection [connectionId{localValue:2, serverValue:147}] to localhost:27017
+INFO  [2017-10-21 19:00:24,700] org.eclipse.jetty.server.AbstractConnector: Stopped application@76b305e1{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-10-21 19:00:24,701] org.eclipse.jetty.server.AbstractConnector: Stopped admin@6be766d1{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-10-21 19:00:24,703] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@6f4fc83f{/,null,UNAVAILABLE}
+INFO  [2017-10-21 19:00:24,707] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@12532e37{/,null,UNAVAILABLE}
+INFO  [2017-10-21 19:00:24,710] org.mongodb.driver.connection: Closed connection [connectionId{localValue:2, serverValue:147}] to localhost:27017 because the pool has been closed.

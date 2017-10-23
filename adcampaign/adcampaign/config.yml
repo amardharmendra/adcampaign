@@ -1,0 +1,38 @@
+appName: Ad Campaign Server - Dev !!!
+
+mongoConfiguration:
+  hosts:
+    - host: "localhost"
+      port: 27017
+  database: "adcampaign"
+  connectTimeout: 500
+  heartbeatConnectTimeout: 500
+
+swagger:
+  resourcePackage: "com.adcampaign.resources"
+
+logging:
+  level: INFO
+  loggers:
+    "com.zulily": DEBUG
+  appenders:
+    - type: file
+      currentLogFilename: ./logs/service.log
+      archive: false
+      timeZone: PST
+
+server:
+  type: default
+  applicationConnectors:
+    - type: http
+      port: 8080
+  adminConnectors:
+    - type: http
+      port: 8081
+  type: default
+  requestLog:
+    type: classic
+    timeZone: PST
+    appenders:
+      - type: console
+        threshold: ALL
